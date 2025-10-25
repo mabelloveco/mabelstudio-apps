@@ -1,0 +1,54 @@
+name: Security Checks
+
+on:
+  push:
+    branches: [ main, chore/review-prep ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run security audit
+      run: npm audit --audit-level moderate
+      
+    - name: Check for secrets
+      run: |
+        if grep -r "sk_live\|pk_live\|secret\|password\|token" --include="*.js" --include="*.ts" --include="*.json" .; then
+          echo "❌ Potential secrets found in code"
+          exit 1
+        else
+          echo "✅ No secrets found in code"
+        fi
+        
+    - name: Verify webhook security
+      run: |
+        if grep -q "verifyWebhook" pages/api/webhooks.js; then
+          echo "✅ Webhook HMAC verification found"
+        else
+          echo "❌ Webhook HMAC verification missing"
+          exit 1
+        fi
+        
+    - name: Verify session security
+      run: |
+        if grep -q "verifySession" pages/api/health.js; then
+          echo "✅ Session token verification found"
+        else
+          echo "❌ Session token verification missing"
+          exit 1
+        fi
