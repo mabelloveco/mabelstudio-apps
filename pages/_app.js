@@ -1,15 +1,15 @@
 import '../styles/globals.css';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
-  variable: '--font-inter',
+  variable: '--font-montserrat',
 });
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={inter.variable}>
+    <div className={montserrat.variable}>
       <Component {...pageProps} />
     </div>
   );

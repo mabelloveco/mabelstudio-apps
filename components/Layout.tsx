@@ -6,12 +6,14 @@ interface LayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
+  canonical?: string;
 }
 
 export default function Layout({ 
   children, 
-  title = "Mabel Studio - Shopify Apps for Growing Businesses",
-  description = "Build powerful Shopify apps that help merchants grow their business. Free Gift Tiers, analytics, and more tools for e-commerce success."
+  title = "Mabel Studio — Shopify apps that help merchants grow",
+  description = "Build powerful Shopify apps that help merchants grow their business. Free Gift Tiers, analytics, and more tools for e-commerce success.",
+  canonical = "https://mabelstudio.co/"
 }: LayoutProps) {
   return (
     <>
@@ -25,7 +27,7 @@ export default function Layout({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mabelstudio.co" />
+        <meta property="og:url" content={canonical} />
         <meta property="og:image" content="https://mabelstudio.co/og-image.jpg" />
         <meta property="og:site_name" content="Mabel Studio" />
         
@@ -38,13 +40,13 @@ export default function Layout({
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Mabel Studio" />
-        <link rel="canonical" href="https://mabelstudio.co" />
+        <link rel="canonical" href={canonical} />
       </Head>
       
       <div className="min-h-screen flex flex-col">
         {/* Skip Link */}
         <a href="#main" className="skip-link">
-          Skip to main content
+          Skip to content
         </a>
         
         {/* Header */}
@@ -59,14 +61,11 @@ export default function Layout({
                 <Link href="/" className="nav-link">
                   Home
                 </Link>
-                <Link href="#features" className="nav-link">
-                  Features
+                <Link href="/apps" className="nav-link">
+                  Apps
                 </Link>
-                <Link href="#pricing" className="nav-link">
-                  Pricing
-                </Link>
-                <Link href="https://apps.shopify.com/partners/mabel-studio" className="nav-link">
-                  All Apps
+                <Link href="/support" className="nav-link">
+                  Support
                 </Link>
                 <a 
                   href="https://apps.shopify.com/free-gift-tiers" 
@@ -95,27 +94,13 @@ export default function Layout({
                 <p style={{ color: '#9ca3af', marginBottom: 'var(--space-lg)' }}>
                   Building powerful apps for Shopify merchants to grow their business.
                 </p>
-                <div style={{ display: 'flex', gap: 'var(--space-md)' }}>
-                  <a href="#" className="footer-link" aria-label="Twitter">
-                    Twitter
-                  </a>
-                  <a href="#" className="footer-link" aria-label="LinkedIn">
-                    LinkedIn
-                  </a>
-                  <a href="#" className="footer-link" aria-label="GitHub">
-                    GitHub
-                  </a>
-                </div>
               </div>
               
               <div>
                 <h4 style={{ color: 'white', marginBottom: 'var(--space-md)' }}>Product</h4>
                 <div className="footer-links">
-                  <Link href="#features" className="footer-link">
-                    Features
-                  </Link>
-                  <Link href="#pricing" className="footer-link">
-                    Pricing
+                  <Link href="/apps" className="footer-link">
+                    Apps
                   </Link>
                   <a 
                     href="https://apps.shopify.com/free-gift-tiers" 
@@ -131,13 +116,13 @@ export default function Layout({
               <div>
                 <h4 style={{ color: 'white', marginBottom: 'var(--space-md)' }}>Support</h4>
                 <div className="footer-links">
-                  <Link href="/free-gift-tiers/privacy.html" className="footer-link">
-                    Privacy Policy
+                  <Link href="/privacy" className="footer-link">
+                    Privacy
                   </Link>
-                  <Link href="/free-gift-tiers/terms.html" className="footer-link">
-                    Terms of Service
+                  <Link href="/terms" className="footer-link">
+                    Terms
                   </Link>
-                  <Link href="/free-gift-tiers/support.html" className="footer-link">
+                  <Link href="/support" className="footer-link">
                     Support
                   </Link>
                 </div>
