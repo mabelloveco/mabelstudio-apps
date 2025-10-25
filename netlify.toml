@@ -8,3 +8,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "https://free-gift-tiers.netlify.app/*"
+  to = "https://free-gift-tiers.mabelstudio.co/:splat"
+  status = 301
+  force = true
