@@ -1,5 +1,7 @@
 import { verifyWebhook } from '../../lib/verify-webhook'
 
+export const config = { api: { bodyParser: false } }
+
 export default async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
