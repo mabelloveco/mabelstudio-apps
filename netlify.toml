@@ -1,16 +1,9 @@
 [build]
   command = "npm run build"
-  publish = ".next"
-
-[functions]
-  node_bundler = "esbuild"
-  included_files = ["**/*"]
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  publish = "out"
 
 [[redirects]]
   from = "https://free-gift-tiers.netlify.app/*"
-  to = "https://free-gift-tiers.mabelstudio.co/:splat"
+  to = "https://mabelstudio.co/:splat"
   status = 301
   force = true
