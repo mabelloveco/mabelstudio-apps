@@ -16,8 +16,8 @@ export default async (req, res) => {
 
   const { customer, shop } = req.body;
   
-  // Log GDPR data request
-  console.log(`GDPR data request for customer: ${customer.id} in shop: ${shop.domain}`);
+  // Log GDPR data request (no PII)
+  console.log(`GDPR data request received for shop: ${shop.domain}`);
   
   // TODO: Implement actual data export logic
   // For now, just log and return 200

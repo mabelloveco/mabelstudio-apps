@@ -16,7 +16,7 @@ export default async (req, res) => {
   
   const { shop } = req.body
   // TODO: Clean up shop data, tokens, theme assets
-  console.log('App uninstalled:', shop)
+  console.log('App uninstalled for shop:', shop.domain)
   
   res.status(200).end()
 }

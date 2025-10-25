@@ -16,8 +16,8 @@ export default async (req, res) => {
 
   const { shop } = req.body;
   
-  // Log GDPR shop redact request
-  console.log(`GDPR shop redact for shop: ${shop.domain}`);
+  // Log GDPR shop redact request (no PII)
+  console.log(`GDPR shop redact received for shop: ${shop.domain}`);
   
   // TODO: Implement actual shop data redaction logic
   // For now, just log and return 200
