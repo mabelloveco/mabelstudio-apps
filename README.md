@@ -36,3 +36,4 @@ Deploy to Netlify with custom domain: `free-gift-tiers.mabelstudio.co`
 
 - URL: `https://free-gift-tiers.mabelstudio.co/api/health`
 - Response: `{"status": "ok"}`
+# Force deployment
