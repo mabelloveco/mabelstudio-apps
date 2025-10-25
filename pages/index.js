@@ -37,9 +37,9 @@ export default function Home() {
       <section id="features" className="section features">
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
-            <h2>Everything you need to boost AOV</h2>
+            <h2>Everything you need to grow your Shopify store</h2>
             <p style={{ fontSize: 'var(--font-size-lg)', maxWidth: '600px', margin: '0 auto' }}>
-              Powerful features designed to help you increase average order value through intelligent gift incentives.
+              Powerful apps and tools designed to help merchants increase revenue, optimize operations, and scale their business.
             </p>
           </div>
           
@@ -47,12 +47,12 @@ export default function Home() {
             {MARKETING.features.map((feature, index) => (
               <div key={index} className="card feature-card">
                 <div className="feature-icon">
-                  {index === 0 && '🎯'}
-                  {index === 1 && '⚡'}
-                  {index === 2 && '📊'}
-                  {index === 3 && '🧪'}
-                  {index === 4 && '🛒'}
-                  {index === 5 && '👥'}
+                  {index === 0 && '🎁'}
+                  {index === 1 && '📊'}
+                  {index === 2 && '⚙️'}
+                  {index === 3 && '🛠️'}
+                  {index === 4 && '🔗'}
+                  {index === 5 && '👨‍💼'}
                 </div>
                 <h3 style={{ marginBottom: 'var(--space-md)' }}>{feature.title}</h3>
                 <p>{feature.description}</p>
@@ -68,7 +68,7 @@ export default function Home() {
           <div style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
             <h2>Trusted by growing businesses</h2>
             <p style={{ fontSize: 'var(--font-size-lg)', maxWidth: '600px', margin: '0 auto' }}>
-              See what store owners are saying about Free Gift Tiers.
+              See what store owners are saying about Mabel Studio apps.
             </p>
           </div>
           
@@ -130,11 +130,11 @@ export default function Home() {
                   </ul>
                   
                   <a 
-                    href={plan.name === 'Enterprise' ? 'mailto:sales@mabelstudio.co' : MARKETING.ctaPrimaryHref}
+                    href={plan.name === 'Custom Development' ? 'mailto:sales@mabelstudio.co' : MARKETING.ctaPrimaryHref}
                     className={`btn ${plan.popular ? 'btn-primary' : 'btn-secondary'}`}
                     style={{ width: '100%' }}
-                    target={plan.name === 'Enterprise' ? undefined : '_blank'}
-                    rel={plan.name === 'Enterprise' ? undefined : 'noopener noreferrer'}
+                    target={plan.name === 'Custom Development' ? undefined : '_blank'}
+                    rel={plan.name === 'Custom Development' ? undefined : 'noopener noreferrer'}
                   >
                     {plan.cta}
                   </a>
@@ -156,7 +156,7 @@ export default function Home() {
             border: '1px solid var(--color-border-light)'
           }}>
             <h2 style={{ marginBottom: 'var(--space-lg)' }}>
-              Ready to increase your AOV?
+              Ready to grow your Shopify store?
             </h2>
             <p style={{ 
               fontSize: 'var(--font-size-lg)', 
@@ -165,7 +165,7 @@ export default function Home() {
               maxWidth: '500px',
               margin: '0 auto var(--space-xl)'
             }}>
-              Join thousands of stores already using Free Gift Tiers to grow their revenue.
+              Join thousands of stores already using Mabel Studio apps to grow their business.
             </p>
             <a 
               href={MARKETING.ctaPrimaryHref}

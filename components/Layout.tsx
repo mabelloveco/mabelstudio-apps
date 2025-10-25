@@ -10,8 +10,8 @@ interface LayoutProps {
 
 export default function Layout({ 
   children, 
-  title = "Free Gift Tiers - Increase AOV with Smart Gift Incentives",
-  description = "Set smart thresholds, motivate larger carts, and grow revenue with intelligent gift incentives. Easy setup, real-time analytics, and A/B testing included."
+  title = "Mabel Studio - Shopify Apps for Growing Businesses",
+  description = "Build powerful Shopify apps that help merchants grow their business. Free Gift Tiers, analytics, and more tools for e-commerce success."
 }: LayoutProps) {
   return (
     <>
@@ -25,20 +25,20 @@ export default function Layout({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://free-gift-tiers.mabelstudio.co" />
-        <meta property="og:image" content="https://free-gift-tiers.mabelstudio.co/og-image.jpg" />
-        <meta property="og:site_name" content="Free Gift Tiers" />
+        <meta property="og:url" content="https://mabelstudio.co" />
+        <meta property="og:image" content="https://mabelstudio.co/og-image.jpg" />
+        <meta property="og:site_name" content="Mabel Studio" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://free-gift-tiers.mabelstudio.co/og-image.jpg" />
+        <meta name="twitter:image" content="https://mabelstudio.co/og-image.jpg" />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Mabel Studio" />
-        <link rel="canonical" href="https://free-gift-tiers.mabelstudio.co" />
+        <link rel="canonical" href="https://mabelstudio.co" />
       </Head>
       
       <div className="min-h-screen flex flex-col">
