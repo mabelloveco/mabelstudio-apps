@@ -1,0 +1,23 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "free-gift-tiers"
+client_id = "PLACEHOLDER"
+application_url = "https://free-gift-tiers.mabelstudio.co"
+embedded = true
+
+[auth]
+redirect_urls = [
+  "https://free-gift-tiers.mabelstudio.co/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+subscriptions = [
+  { topic = "app/uninstalled", uri = "/api/webhooks" },
+  { topic = "customers/data_request", uri = "/api/gdpr/data_request" },
+  { topic = "customers/redact", uri = "/api/gdpr/customers_redact" },
+  { topic = "shop/redact", uri = "/api/gdpr/shop_redact" }
+]
+
+[pos]
+embedded = false
