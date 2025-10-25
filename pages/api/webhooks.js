@@ -1,19 +1,20 @@
-export default function handler(req, res) {
+import { verifyWebhook } from '../../lib/verify-webhook'
+
+export default async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { topic, shop } = req.body;
+  const rawBody = JSON.stringify(req.body)
+  const signature = req.headers['x-shopify-hmac-sha256']
   
-  // Log webhook for debugging
-  console.log(`Webhook received: ${topic} for shop: ${shop}`);
-  
-  // Handle app/uninstalled
-  if (topic === 'app/uninstalled') {
-    // Mark shop as uninstalled and purge tokens
-    console.log(`App uninstalled for shop: ${shop}`);
-    // TODO: Implement actual cleanup logic
+  if (!verifyWebhook(rawBody, signature, process.env.SHOPIFY_WEBHOOK_SECRET || process.env.SHOPIFY_API_SECRET)) {
+    return res.status(401).end()
   }
   
-  res.status(200).json({ received: true });
+  const { shop } = req.body
+  // TODO: Clean up shop data, tokens, theme assets
+  console.log('App uninstalled:', shop)
+  
+  res.status(200).end()
 }

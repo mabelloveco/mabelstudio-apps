@@ -19,5 +19,8 @@ subscriptions = [
   { topic = "shop/redact", uri = "/api/gdpr/shop_redact" }
 ]
 
+[access_scopes]
+scopes = "write_products"
+
 [pos]
 embedded = false
