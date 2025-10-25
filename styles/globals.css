@@ -64,7 +64,7 @@ html {
 }
 
 body {
-  font-family: var(--font-montserrat), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: var(--font-size-base);
   line-height: 1.6;
   color: var(--color-text);
@@ -85,10 +85,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: var(--font-size-5xl);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 5rem);
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 }
 
@@ -113,6 +113,10 @@ h6 {
 }
 
 p {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
   margin-bottom: var(--space-md);
   color: var(--color-text-light);
 }
@@ -158,14 +162,25 @@ p {
   }
 }
 
+/* Links */
+a {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 /* Buttons */
 .btn {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: var(--space-sm) var(--space-lg);
   font-size: var(--font-size-base);
-  font-weight: 600;
   text-decoration: none;
   border: none;
   border-radius: var(--radius-md);
