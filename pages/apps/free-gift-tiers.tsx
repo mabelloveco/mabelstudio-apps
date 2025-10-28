@@ -1,190 +1,135 @@
-import Layout from '../../components/Layout';
+import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
 
 export default function FreeGiftTiers() {
   return (
     <Layout
       title="Free Gift Tiers — Shopify Gift Thresholds | Mabel Studio"
-      description="Increase average order value with smart gift thresholds. Free Gift Tiers helps merchants encourage higher purchases with customizable gift tier displays."
+      description="Motivate larger carts with automatic gift tiers. Simple setup, customizable design."
       canonical="https://mabelstudio.co/apps/free-gift-tiers"
     >
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
-          <h1>Free Gift Tiers</h1>
+          <h1 className="hero-title">
+            Free Gift Tiers for Shopify
+          </h1>
           <p className="hero-subtitle">
-            Increase average order value with smart gift thresholds that encourage customers to spend more and unlock exclusive rewards.
+            Reward customers when they hit spend thresholds.
           </p>
           <div className="hero-ctas">
             <a 
-              href="https://apps.shopify.com/free-gift-tiers"
+              href="https://apps.shopify.com/free-gift-tiers" 
               className="btn btn-primary btn-lg"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Install Free Gift Tiers on Shopify"
             >
-              Install Free Gift Tiers
+              Install on Shopify
+            </a>
+            <a 
+              href="#features" 
+              className="btn btn-secondary btn-lg"
+              aria-label="View app features"
+            >
+              See features
             </a>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="section features">
+      <section id="features" className="section features">
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
-            <h2>Powerful features for growing stores</h2>
-            <p style={{ fontSize: 'var(--font-size-lg)', maxWidth: '600px', margin: '0 auto' }}>
-              Everything you need to implement effective gift tiers and increase your average order value.
-            </p>
-          </div>
-          
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
+            Powerful Features
+          </h2>
           <div className="grid grid-3">
             <div className="card feature-card">
+              <div className="feature-icon">🎁</div>
+              <h3>Auto-add gifts</h3>
+              <p>Automatically add gifts to cart when customers reach spending thresholds. Support for GWP and BOGO offers.</p>
+            </div>
+            <div className="card feature-card">
+              <div className="feature-icon">📈</div>
+              <h3>Cart upsell</h3>
+              <p>Increase average order value with strategic cross-sell and upsell opportunities at checkout.</p>
+            </div>
+            <div className="card feature-card">
               <div className="feature-icon">🎯</div>
-              <h3>Smart thresholds</h3>
-              <p>Automatically set gift tiers based on cart value to encourage higher purchases and increase average order value.</p>
+              <h3>Multi-tier triggers</h3>
+              <p>Set multiple spending tiers with different rewards to encourage larger purchases.</p>
             </div>
-            
             <div className="card feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3>Instant setup</h3>
-              <p>Get up and running in minutes with our one-click installation and intuitive configuration process.</p>
+              <div className="feature-icon">⏰</div>
+              <h3>Scheduling</h3>
+              <p>Schedule campaigns for specific dates and times to align with your marketing calendar.</p>
             </div>
-            
             <div className="card feature-card">
-              <div className="feature-icon">📊</div>
-              <h3>Real-time analytics</h3>
-              <p>Track performance with detailed insights on gift tier effectiveness and customer behavior patterns.</p>
+              <div className="feature-icon">👥</div>
+              <h3>Audience targeting</h3>
+              <p>Target specific customer segments with personalized gift offers and messaging.</p>
             </div>
-            
-            <div className="card feature-card">
-              <div className="feature-icon">🛒</div>
-              <h3>Cart integration</h3>
-              <p>Seamlessly integrates with your existing cart and checkout flow without disrupting the customer experience.</p>
-            </div>
-            
             <div className="card feature-card">
               <div className="feature-icon">🎨</div>
-              <h3>Customizable design</h3>
-              <p>Match your brand with fully customizable gift tier displays that blend perfectly with your store design.</p>
-            </div>
-            
-            <div className="card feature-card">
-              <div className="feature-icon">🔒</div>
-              <h3>GDPR-ready</h3>
-              <p>Built with privacy in mind, ensuring compliance with data protection regulations and customer trust.</p>
+              <h3>Theme customization</h3>
+              <p>Customize the design with CSS to match your store's branding and aesthetic.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How it works Section */}
+      {/* How it Works Section */}
       <section className="section">
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
-            <h2>How it works</h2>
-            <p style={{ fontSize: 'var(--font-size-lg)', maxWidth: '600px', margin: '0 auto' }}>
-              Get started in three simple steps and begin increasing your average order value immediately.
-            </p>
-          </div>
-          
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
+            How it Works
+          </h2>
           <div className="grid grid-3">
             <div className="card" style={{ textAlign: 'center', padding: 'var(--space-xl)' }}>
-              <div style={{ 
-                width: '60px', 
-                height: '60px', 
-                background: 'var(--color-primary)', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                margin: '0 auto var(--space-lg)',
-                color: 'white',
-                fontSize: 'var(--font-size-xl)',
-                fontWeight: '700'
-              }}>
-                1
-              </div>
-              <h3>Install the app</h3>
-              <p>One-click installation from the Shopify App Store. No technical setup required.</p>
+              <div className="feature-icon" style={{ backgroundColor: 'var(--color-accent)' }}>1</div>
+              <h3>Set tiers</h3>
+              <p>Configure spending thresholds and choose which gifts to offer at each level.</p>
             </div>
-            
             <div className="card" style={{ textAlign: 'center', padding: 'var(--space-xl)' }}>
-              <div style={{ 
-                width: '60px', 
-                height: '60px', 
-                background: 'var(--color-primary)', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                margin: '0 auto var(--space-lg)',
-                color: 'white',
-                fontSize: 'var(--font-size-xl)',
-                fontWeight: '700'
-              }}>
-                2
-              </div>
-              <h3>Configure your tiers</h3>
-              <p>Set up your gift thresholds and customize the display to match your brand perfectly.</p>
+              <div className="feature-icon" style={{ backgroundColor: 'var(--color-accent)' }}>2</div>
+              <h3>Customer unlocks gift</h3>
+              <p>When customers add items to their cart, they automatically see available gifts.</p>
             </div>
-            
             <div className="card" style={{ textAlign: 'center', padding: 'var(--space-xl)' }}>
-              <div style={{ 
-                width: '60px', 
-                height: '60px', 
-                background: 'var(--color-primary)', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                margin: '0 auto var(--space-lg)',
-                color: 'white',
-                fontSize: 'var(--font-size-xl)',
-                fontWeight: '700'
-              }}>
-                3
-              </div>
-              <h3>Watch sales grow</h3>
-              <p>Monitor your analytics and see your average order value increase as customers reach for the next tier.</p>
+              <div className="feature-icon" style={{ backgroundColor: 'var(--color-accent)' }}>3</div>
+              <h3>Revenue increases</h3>
+              <p>Higher average order values and improved customer satisfaction drive growth.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Screenshots Section */}
-      <section className="section">
+      <section className="section" style={{ background: 'var(--color-bg-light)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
-            <h2>See it in action</h2>
-            <p style={{ fontSize: 'var(--font-size-lg)', maxWidth: '600px', margin: '0 auto' }}>
-              Beautiful, customizable gift tier displays that integrate seamlessly with your store.
-            </p>
-          </div>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: 'var(--space-lg)',
-            maxWidth: '800px',
-            margin: '0 auto'
-          }}>
-            <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
+            See it in Action
+          </h2>
+          <div className="grid grid-2" style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="card" style={{ padding: 'var(--space-lg)' }}>
               <Image
                 src="/mockup-dashboard.png"
-                alt="Free Gift Tiers dashboard showing analytics and configuration options"
+                alt="Free Gift Tiers dashboard showing tier configuration"
                 width={400}
                 height={300}
-                style={{ width: '100%', height: 'auto' }}
+                style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-md)' }}
               />
             </div>
-            <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+            <div className="card" style={{ padding: 'var(--space-lg)' }}>
               <Image
                 src="/mockup-dashboard.png"
-                alt="Gift tier display on product page showing progress to next reward"
+                alt="Free Gift Tiers customer experience at checkout"
                 width={400}
                 height={300}
-                style={{ width: '100%', height: 'auto' }}
+                style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-md)' }}
               />
             </div>
           </div>
@@ -194,114 +139,68 @@ export default function FreeGiftTiers() {
       {/* FAQ Section */}
       <section className="section">
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
-            <h2>Frequently asked questions</h2>
-            <p style={{ fontSize: 'var(--font-size-lg)', maxWidth: '600px', margin: '0 auto' }}>
-              Everything you need to know about Free Gift Tiers.
-            </p>
-          </div>
-          
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="faq-item" style={{ 
-              marginBottom: 'var(--space-lg)', 
-              padding: 'var(--space-lg)', 
-              background: 'white',
-              borderRadius: 'var(--radius-lg)',
-              border: '1px solid var(--color-border-light)'
-            }}>
-              <h3 style={{ marginBottom: 'var(--space-sm)' }}>How quickly can I set up gift tiers?</h3>
-              <p>Setup takes just a few minutes. Install the app, configure your thresholds, and customize the display to match your brand. No technical knowledge required.</p>
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="grid" style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="card faq-item" style={{ marginBottom: 'var(--space-lg)' }}>
+              <div className="card-body">
+                <h3>How many gift tiers can I create?</h3>
+                <p>You can create unlimited gift tiers with different spending thresholds and rewards.</p>
+              </div>
             </div>
-            
-            <div className="faq-item" style={{ 
-              marginBottom: 'var(--space-lg)', 
-              padding: 'var(--space-lg)', 
-              background: 'white',
-              borderRadius: 'var(--radius-lg)',
-              border: '1px solid var(--color-border-light)'
-            }}>
-              <h3 style={{ marginBottom: 'var(--space-sm)' }}>Can I customize the appearance?</h3>
-              <p>Yes, the gift tier display is fully customizable. Match your brand colors, fonts, and styling to create a seamless experience for your customers.</p>
+            <div className="card faq-item" style={{ marginBottom: 'var(--space-lg)' }}>
+              <div className="card-body">
+                <h3>Does it work with all themes?</h3>
+                <p>Yes, Free Gift Tiers works with any Shopify theme and includes customization options.</p>
+              </div>
             </div>
-            
-            <div className="faq-item" style={{ 
-              marginBottom: 'var(--space-lg)', 
-              padding: 'var(--space-lg)', 
-              background: 'white',
-              borderRadius: 'var(--radius-lg)',
-              border: '1px solid var(--color-border-light)'
-            }}>
-              <h3 style={{ marginBottom: 'var(--space-sm)' }}>What analytics are available?</h3>
-              <p>Track conversion rates, average order value increases, and customer behavior patterns. Get insights on which gift tiers are most effective for your store.</p>
+            <div className="card faq-item" style={{ marginBottom: 'var(--space-lg)' }}>
+              <div className="card-body">
+                <h3>Can I combine with other discounts?</h3>
+                <p>Gift tiers work alongside your existing discount codes and promotions without conflicts.</p>
+              </div>
             </div>
-            
-            <div className="faq-item" style={{ 
-              marginBottom: 'var(--space-lg)', 
-              padding: 'var(--space-lg)', 
-              background: 'white',
-              borderRadius: 'var(--radius-lg)',
-              border: '1px solid var(--color-border-light)'
-            }}>
-              <h3 style={{ marginBottom: 'var(--space-sm)' }}>Does it work with all themes?</h3>
-              <p>Free Gift Tiers is compatible with all Shopify themes. The app uses standard Shopify APIs and integrates seamlessly with your existing store design.</p>
+            <div className="card faq-item" style={{ marginBottom: 'var(--space-lg)' }}>
+              <div className="card-body">
+                <h3>Is there a free trial?</h3>
+                <p>Yes, you can try Free Gift Tiers free for 14 days with full access to all features.</p>
+              </div>
             </div>
-            
-            <div className="faq-item" style={{ 
-              marginBottom: 'var(--space-lg)', 
-              padding: 'var(--space-lg)', 
-              background: 'white',
-              borderRadius: 'var(--radius-lg)',
-              border: '1px solid var(--color-border-light)'
-            }}>
-              <h3 style={{ marginBottom: 'var(--space-sm)' }}>Is there a free trial?</h3>
-              <p>Yes, you can try Free Gift Tiers free for 14 days. No credit card required. See the results for yourself before committing to a plan.</p>
+            <div className="card faq-item" style={{ marginBottom: 'var(--space-lg)' }}>
+              <div className="card-body">
+                <h3>How do I uninstall the app?</h3>
+                <p>You can uninstall anytime from your Shopify admin with one click. No data is retained.</p>
+              </div>
             </div>
-            
-            <div className="faq-item" style={{ 
-              marginBottom: 'var(--space-lg)', 
-              padding: 'var(--space-lg)', 
-              background: 'white',
-              borderRadius: 'var(--radius-lg)',
-              border: '1px solid var(--color-border-light)'
-            }}>
-              <h3 style={{ marginBottom: 'var(--space-sm)' }}>What support is available?</h3>
-              <p>We provide comprehensive documentation, email support, and a knowledge base. Our team is here to help you succeed with your gift tier strategy.</p>
+            <div className="card faq-item" style={{ marginBottom: 'var(--space-lg)' }}>
+              <div className="card-body">
+                <h3>What support is available?</h3>
+                <p>We provide email support and documentation to help you get the most from the app.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA Section */}
-      <section className="section">
+      <section className="section" style={{ background: 'var(--color-bg-light)', textAlign: 'center' }}>
         <div className="container">
-          <div style={{ 
-            textAlign: 'center', 
-            background: 'var(--color-bg-light)',
-            padding: 'var(--space-3xl)',
-            borderRadius: 'var(--radius-xl)',
-            border: '1px solid var(--color-border-light)'
-          }}>
-            <h2 style={{ marginBottom: 'var(--space-lg)' }}>
-              Ready to increase your average order value?
-            </h2>
-            <p style={{ 
-              fontSize: 'var(--font-size-lg)', 
-              color: 'var(--color-text-light)',
-              marginBottom: 'var(--space-xl)',
-              maxWidth: '500px',
-              margin: '0 auto var(--space-xl)'
-            }}>
-              Join thousands of stores already using Free Gift Tiers to grow their business.
-            </p>
-            <a 
-              href="https://apps.shopify.com/free-gift-tiers"
-              className="btn btn-primary btn-lg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Install Free Gift Tiers
-            </a>
-          </div>
+          <h2 style={{ marginBottom: 'var(--space-lg)' }}>
+            Ready to Increase Your Average Order Value?
+          </h2>
+          <p style={{ fontSize: 'var(--font-size-lg)', marginBottom: 'var(--space-2xl)', maxWidth: '600px', margin: '0 auto var(--space-2xl)' }}>
+            Start rewarding your customers today with automatic gift tiers that drive larger purchases.
+          </p>
+          <a 
+            href="https://apps.shopify.com/free-gift-tiers" 
+            className="btn btn-primary btn-lg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Install Free Gift Tiers on Shopify"
+          >
+            Install on Shopify
+          </a>
         </div>
       </section>
     </Layout>
